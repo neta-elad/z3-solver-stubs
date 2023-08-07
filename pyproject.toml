@@ -20,11 +20,12 @@ test = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["z3-stubs*"]
+where = ["z3-stubs"]
+include = ["z3*"]
 
 
 [tool.setuptools.package-data]
-z3 = ["*.pyi"]
+"*" = ["*.pyi"]
 
 
 [tool.mypy]
