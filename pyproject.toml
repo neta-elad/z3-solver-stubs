@@ -23,6 +23,10 @@ test = [
 include = ["z3-stubs*"]
 
 
+[tool.setuptools.package-data]
+z3 = ["*.pyi"]
+
+
 [tool.mypy]
 disallow_untyped_calls = true
 disallow_untyped_defs = true
