@@ -11,7 +11,7 @@ license = { text = "BSD 3-Clause License" }
 dependencies = [
     "z3-solver==4.12.2.0",
 ]
-dynamic = ["version"]
+version = "4.12.2.0"
 
 [project.optional-dependencies]
 test = [
@@ -20,13 +20,9 @@ test = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["z3_solver_stubs*"]
-
-[tool.setuptools.dynamic]
-version = { attr = "z3_solver_stubs.__version__" }
+include = ["z3-stubs*"]
 
 [tool.mypy]
-mypy_path = "stubs"
 disallow_untyped_calls = true
 disallow_untyped_defs = true
 disallow_subclassing_any = false

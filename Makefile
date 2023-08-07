@@ -7,7 +7,7 @@ format:
 
 .PHONY: type
 type:
-	mypy --strict z3_solver_stubs stubs
+	mypy --strict z3-stubs
 
 .PHONY: env
 env:
