@@ -11,7 +11,7 @@ license = { text = "BSD 3-Clause License" }
 dependencies = [
     "z3-solver==4.13.3.0",
 ]
-version = "4.13.3.0"
+version = "4.13.3.0-1"
 
 [project.optional-dependencies]
 test = [
@@ -21,9 +21,7 @@ test = [
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-include = ["z3-stubs*"]
+packages = ["z3-stubs"]
 
 
 [tool.setuptools.package-data]
