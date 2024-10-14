@@ -11,12 +11,20 @@ type:
 
 .PHONY: env
 env:
-	! [ -d .venv ] && python3 -m venv .venv || true
+	@! [ -d .venv ] && python3.11 -m venv .venv || true
+	@echo source .venv/bin/activate
+
+.PHONY: install-dev
+install-dev: update-pip
+	pip install --force-reinstall -e .[test]
 
 .PHONY: install
 install:
-	yes | pip uninstall z3-solver-stubs
-	pip install -e .[test]
+	pip install --force-reinstall .
+
+.PHONY: update-pip
+update-pip:
+	pip install --upgrade pip
 
 .PHONY: clean
 clean:
