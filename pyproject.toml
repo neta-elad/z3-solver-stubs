@@ -11,17 +11,16 @@ license = { text = "BSD 3-Clause License" }
 dependencies = [
     "z3-solver==4.13.3.0",
 ]
-version = "4.13.3.0-2"
+version = "4.13.3.0-4"
 
 [project.optional-dependencies]
-test = [
+dev = [
     "mypy==1.1.1",
     "black==23.1.0",
 ]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["z3-stubs"]
 
 
 [tool.setuptools.package-data]

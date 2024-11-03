@@ -3,11 +3,11 @@ all: format type
 
 .PHONY: format
 format:
-	black .
+	black src
 
 .PHONY: type
 type:
-	mypy --strict z3-stubs
+	mypy --strict src
 
 .PHONY: env
 env:
@@ -16,7 +16,7 @@ env:
 
 .PHONY: install-dev
 install-dev: update-pip
-	pip install --force-reinstall -e .[test]
+	pip install --force-reinstall -e .[dev]
 
 .PHONY: install
 install:
