@@ -9,6 +9,9 @@ from typing import (
 class Context: ...
 class Z3PPObject: ...
 
+class Z3Exception(Exception):
+    value: bytes
+
 class AstRef(Z3PPObject):
     def eq(self, other: Any) -> bool: ...
 
