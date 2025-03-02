@@ -11,7 +11,7 @@ license = { text = "BSD 3-Clause License" }
 dependencies = [
     "z3-solver==4.13.3.0",
 ]
-version = "4.13.3.0-11"
+version = "4.13.3.0-12"
 
 [project.optional-dependencies]
 dev = [
