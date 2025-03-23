@@ -8,15 +8,18 @@ from typing import (
     Self,
 )
 
-import z3
-
 class Context: ...
 class Z3PPObject: ...
+class Ast: ...
 
 class Z3Exception(Exception):
     value: bytes
 
 class AstRef(Z3PPObject):
+    ast: Ast
+    ctx: Context
+
+    def __init__(self, ast: Ast, ctx: Context | None = None) -> None: ...
     def eq(self, other: Any) -> bool: ...
 
 class SortRef(AstRef):
@@ -269,7 +272,7 @@ class OnClause:
     def __init__(
         self,
         solver: Solver,
-        on_clause: Callable[[z3.ExprRef, list[z3.AstRef], Sequence[z3.BoolRef]], None],
+        on_clause: Callable[[ExprRef, list[AstRef], Sequence[BoolRef]], None],
     ) -> None: ...
 
 sat: CheckSatResult = ...
