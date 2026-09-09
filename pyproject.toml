@@ -9,7 +9,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "BSD 3-Clause License" }
 dependencies = [
-    "z3-solver==4.13.3.0",
+    "z3-solver>=4.13.3.0",
 ]
 version = "4.13.3.0-20"
 
